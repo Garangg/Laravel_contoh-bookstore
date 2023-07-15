@@ -33,6 +33,8 @@ Route::prefix('v1')->group(function () {
         Route::post('logout', [AuthController::class, 'logout']);
         Route::post('shipping', [ShopController::class, 'shipping']);
         Route::post('services', [ShopController::class, 'services']);
+        Route::post('payment', [ShopController::class, 'payment']);
+        Route::get('my-order', [ShopController::class, 'myOrder']);
     });
 
     Route::get('books', [BookController::class, 'index']);
